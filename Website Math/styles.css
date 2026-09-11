@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.page-header {
+  padding: 1.5em 1em;
+  background-color: #e4e4e4;
+}
+
+.img-inline-r {
+  width: 25%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caption {
+  font-size: 0.75em;
+}
+
+.img-inline-r img {
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+
+.section {
+  width: 95%;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+}
+
+.section-title {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.section-subsubtitle {
+  font-size: 1.075em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.morebr {
+  margin-bottom: 0.75em;
+}
+
+.blog-section {
+  flex-direction: column;
+}
+
+.page-content {
+  width: 100%;
+  text-align: left;
+}
+
+/* TEXT-STYLING */
+
+.center {
+  text-align: center;
+}
+
+.spaceunder {
+  margin-bottom: 0.5em;
+}
+
+.somebold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.l-indent {
+  margin-left: 2em;
+}
+
+.very-bold {
+  font-weight: 800;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.nostyle {
+  text-decoration: none;
+  color: black;
+}
+
+.fancy {
+  color: #0a145b;
+}
+
+.light {
+  color: #707070;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.extend {
+  width: 100%;
+}
+
+/* MAIN-CONTENT */
+
+.main-text {
+  margin-bottom: 1em;
+  font-size: 1em;
+  line-height: 1.35em;
+}
+
+.inner-section {
+  margin-right: 3em;
+}
+
+/* NAVBAR CUSTOMIZATION */
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 1em;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 1.1em;
+  color: white;
+  text-align: center;
+  padding: 0.7em 1em;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 1.1em;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.7em 1em;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(15, 33, 72);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 165px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* BLOG (GENERAL) */
+
+.midline {
+  width: 100%;
+  height: 3em;
+  background-color: #2a2a2a;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 8px 12px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-btn,
+.sidenav a.non-drop {
+  font-size: 1.5em;
+}
+
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 1.1em; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(15, 33, 72);
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 1.1em;
+  }
+}
+
+/* POSTS */
+
+.blog-post {
+  width: 80%;
+  border: 2px solid #3f3f3f;
+  padding: 1em;
+  margin-bottom: 5em;
+}
+
+.blog-post h3 {
+  font-size: 1.75em;
+  font-weight: 600;
+}
+
+.post-date {
+  margin-bottom: 1em;
+}
+
+.post-image {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-image img {
+  object-fit: cover;
+  width: 30%;
+  height: auto;
+  margin: 1em 0.5em;
+}
+
+.post-subtitle {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+/* RESEARCH GENERAL */
+
+.research-image {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.research-image img {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+  margin: 1em 0.5em;
+}
+
+/* LATEX TIPS */
+
+.teX-section {
+  background-color: rgb(211, 211, 211);
+  padding: 1.25em 0.75em;
+}
+
+/* MATH READING LIST */
+
+.inline-books {
+  width: 100%;
+  height: 14em;
+  margin-bottom: 4em;
+  display: flex;
+}
+
+.inline-book-img {
+  height: 14em;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inline-book-img img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.fig-capt {
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  html, body {
+    width: 100%;
+    height: auto;
+  }
+
+  .page-header {
+    padding: 1.5em 1em;
+    background-color: #e4e4e4;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .img-inline {
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1em;
+  }
+
+  .img-inline-r {
+    width: 25%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .caption {
+    font-size: 0.75em;
+  }
+
+  .img-inline-r img {
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+
+  .section {
+    width: 95%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-title {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0.75em;
+  }
+
+  .section-subtitle {
+    font-size: 0.85em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  .section-subsubtitle {
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  .morebr {
+    margin-bottom: 0.75em;
+  }
+
+  .blog-section {
+    flex-direction: column;
+  }
+
+  .page-content {
+    width: 100%; 
+    text-align: left;
+  }
+
+  /* MAIN-CONTENT */
+
+  .main-text {
+    margin-bottom: 1em;
+    font-size: 0.8em;
+    line-height: 1.35em;
+  }
+
+  .inner-section {
+    margin-right: 0.8em;
+  }
+
+  #contact-info {
+    font-size: 0.78em;
+  }
+
+  /*NAVBAR*/
+
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 0.725em;
+    color: white;
+    text-align: center;
+    padding: 0.6em 1em;
+    text-decoration: none;
+  }
+
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 0.725em;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0.6em 1em;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: rgb(15, 33, 72);
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+}
